@@ -1,9 +1,3 @@
-body, html {
-    width: 100%;
-    height: 1000px;
-    margin: 0;
-}
-
 header {
     position: fixed;
     width: 100vw;
@@ -17,6 +11,7 @@ header {
 .logo {
     width: 113px;
     height: 113px;
+    cursor: pointer;
 }
 
 .login img {
@@ -24,7 +19,7 @@ header {
     height: 55px;
 }
 
-.box {
+.box-header {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -55,16 +50,24 @@ header {
     outline: 0;
 }
 
-.assinatura {
+.btn-assinatura {
     color: black;
     text-decoration: none;
 }
 
-.assinatura:visited {
+.btn-assinatura:visited {
     color: black;
     text-decoration: none;
 }
 
-.assinatura h2 {
+.btn-assinatura h2 {
     margin: 0;
+}
+
+.carousel {
+    width: 70%;
+    height: 20em;
+    background-color: #d9d9d9;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
