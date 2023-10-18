@@ -1,0 +1,38 @@
+.login-box {
+    background: #FFF1DF;
+    height: 80%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid blue;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.4); 
+    box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.4);
+}
+
+.sub-login-box input {
+    margin: 5%;
+}
+
+.sub-login-box button {
+    margin-top: 10%;
+    width: 70px;
+    height: 40px;
+}
+
+.sub-login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit-login {
+    position: fixed;
+    top: 0;
+    right: 3%;
+    cursor: pointer;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+}

@@ -14,9 +14,15 @@ header {
     cursor: pointer;
 }
 
-.login img {
+/* .login img {
     width: 55px;
     height: 55px;
+} */
+
+.h-login {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
 }
 
 .box-header {
