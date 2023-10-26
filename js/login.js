@@ -1,5 +1,5 @@
 $('.exit-login').click(function(e){
     $('.login-area').empty();
-    $('.login-area').css({'display': 'none'});
+    $('.login-area').removeClass('d-flex').addClass('d-none');
     $('body').css("overflow", "auto");
 });

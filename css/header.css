@@ -1,11 +1,6 @@
 header {
-    position: fixed;
     width: 100vw;
     background: #FFF1DF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .logo {
@@ -68,12 +63,4 @@ header {
 
 .btn-assinatura h2 {
     margin: 0;
-}
-
-.carousel {
-    width: 70%;
-    height: 20em;
-    background-color: #d9d9d9;
-    border-radius: 0px 0px 20px 20px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }

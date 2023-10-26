@@ -1,6 +1,6 @@
-$(document).ready(() => {
-    $('main').append('<div class="container"></div>');
-});
+// $(document).ready(() => {
+//     $('main').append('<div class="container d-flex flex-wrap align-items-center justify-content-around"></div>');
+// });
 
 // $('.container').ready(() => {
 //     for (var i = 0; i < 33; i++) {
@@ -27,16 +27,16 @@ $('.container').ready(async () => {
         return JSON.parse(res);
     }));
     lista[0].forEach(element => {
-        console.log(element)
+        // console.log(element)
         $('.container').append(`
-            <div class="box-main">
-                <figure>
+            <div class="box-main d-flex flex-column align-items-center justify-content-around">
+                <figure class="text-center m-0">
                     <img src="${element.dir}" alt="imgproduct">
-                    <figcaption>${element.name}</figcaption>
+                    <figcaption class="fs-5">${element.name}</figcaption>
                 </figure>
-                <div class="box-price">
-                    <p><strong>${element.value}</strong></p>
-                    <button>COMPRAR</button>
+                <div class="box-price d-flex align-items-center justify-content-around">
+                    <p class="m-0"><strong>${element.value}</strong></p>
+                    <button class="border-0">COMPRAR</button>
                 </div>
             </div>
         `);

@@ -2,8 +2,6 @@
     background: #FFF1DF;
     height: 80%;
     width: 30%;
-    display: flex;
-    justify-content: center;
     border: 2px solid blue;
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.4); 
@@ -21,14 +19,9 @@
 }
 
 .sub-login-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .exit-login {
-    position: fixed;
     top: 0;
     right: 3%;
     cursor: pointer;
