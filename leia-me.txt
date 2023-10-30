@@ -1,0 +1,6 @@
+Sempre que for criar uma pagina que tenha cabeçalho apenas copie e cole a estrutura da pagina
+"pageDefault.html" e realize o desenvolvimento. A decisão de deixar uma estrutura pronta é visando
+acelerar a produção fazendo com que não seja necessario cada um desenvolver o cabeçalho toda vez
+que for desenvolver.
+
+Qualquer alteração no arquivo "header.html" fara alteração do cabeçalho em todas as outras paginas.

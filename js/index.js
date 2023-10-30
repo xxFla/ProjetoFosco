@@ -1,19 +1,4 @@
-$(".logo").click(() => {
-    window.location.href = '/';
-});
-
-var header = $('header');
-
-
-$('.carousel').css("margin-top", header.height());
-
-
-$('.h-login').click(function(e){
-    $('.login-area').removeClass('d-none').addClass('d-flex');
-    $('body').css("overflow", "hidden");
-    $('.login-area').load("../pages/login.html");
-});
-
+// reposiciona os botões do carrossel
 const btnPrev = $('.carousel-control-prev').innerWidth();
 const btnNext = $('.carousel-control-next').innerWidth();
 
@@ -24,3 +9,4 @@ $('.carousel-control-prev').css({
 $('.carousel-control-next').css({
     "right": (btnPrev / 2) * -1
 });
+// reposiciona os botões do carrossel
