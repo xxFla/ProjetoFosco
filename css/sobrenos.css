@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+}
+
+main {
+    color: #A53C65;
+}
+
+img {
+    width: 200px;
+}
+
+p {
+    font-size: smaller;
+}
+
+.box {
+    background-color: #FFF1DF;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: -3px 3px 7px 0px #000000; 
+    box-shadow: -3px 3px 7px 0px #000000;
+}
+
+h3 {
+    font-size: 1.2em;
+    /* text-decoration: underline; */
+}
