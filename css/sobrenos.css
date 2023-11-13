@@ -26,3 +26,7 @@ h3 {
     font-size: 1.2em;
     /* text-decoration: underline; */
 }
+
+main {
+    margin-top: 0 !important;
+}

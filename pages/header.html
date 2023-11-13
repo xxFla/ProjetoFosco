@@ -1,19 +1,38 @@
 <body>
     <link rel="stylesheet" href="../css/header.css">
     <div class="login-area d-none align-items-center justify-content-center h-100 w-100 z-2 fixed-top"></div>
-    <img class="logo" src="../imgs/icons/OIG-removebg-preview.png" alt="icon-fosco">
-    <div class="box-header">
-        <div class="search">
-            <input type="search" name="search" id="search">
-            <img src="../imgs/icons/search-icon.png" alt="icon-search">
+    <div class="box-header d-flex justify-content-between align-items-center">
+        <img class="logo" src="../imgs/icons/OIG-removebg-preview.png" alt="icon-fosco">
+        <div class="box-searchcat w-50 d-flex flex-column justify-content-around">
+            <div class="d-flex search align-items-center">
+                <input type="search" name="search" id="search">
+                <img src="../imgs/icons/search-icon.png" alt="icon-search">
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Flores</a></li>
+                    <li><a class="dropdown-item" href="#">Buques</a></li>
+                    <li><a class="dropdown-item" href="#">Arranjos</a></li>
+                    <li><a class="dropdown-item" href="#">Ornamentos</a></li>
+                </ul>
+            </div>
         </div>
-        <a href="../pages/assinatura.html" class="btn-assinatura">
-            <h3><strong>Assinatura</strong></h3>
-        </a>
-        <a href="../pages/sobrenos.html" class="btn-assinatura">
-            <h3><strong>Sobre nós</strong></h3>
-        </a>
+        <div class="d-flex flex-row w-25 box-assinatura">
+            <a href="../pages/assinatura.html" class="btn-assinatura">
+                <h3><strong>Assinatura</strong></h3>
+            </a>
+            <a href="../pages/sobrenos.html" class="btn-assinatura">
+                <h3><strong>Sobre nós</strong></h3>
+            </a>
+        </div>
     </div>
     <!-- <a href="#" class="login"><img src="imgs/icons/login-icon.png" alt="icon-login"></a> -->
-    <img class="h-login" src="../imgs/icons/login-icon.png" alt="icon-login">
+    <div class="text-center btn-login">
+        <img class="h-login" src="../imgs/icons/login-icon.png" alt="icon-login">
+        <p class="m-0"><small>Login</small></p>
+    </div>
+    <script src="../js/header.js"></script>
 </body>

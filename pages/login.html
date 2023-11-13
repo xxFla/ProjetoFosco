@@ -1,12 +1,21 @@
 <body>
     <link rel="stylesheet" href="../css/login.css">
-    <h1 class="exit-login position-fixed "><strong>X</strong></h1>
+    <h3 class="exit-login position-fixed "><strong>X</strong></h3>
     <div class="login-box d-flex justify-content-center">
-        <div class="sub-login-box d-flex justify-content-center flex-column align-items-center">
+        <div class="login-container ">
             <h1>Login</h1>
-            <input type="text" placeholder="id">
-            <input type="text" placeholder="pass">
-            <button>Login</button>
+            <hr>
+            <form>
+                <div class="input-container">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" placeholder="Email ou Telefone" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Senha" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
         </div>
     </div>
     <script src="../js/login.js"></script>
