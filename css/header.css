@@ -4,8 +4,8 @@ header {
 }
 
 .logo {
-    width: 113px;
-    height: 113px;
+    width: 7.4%;
+    height: 7.4%;
     cursor: pointer;
 }
 
@@ -14,22 +14,29 @@ header {
     height: 55px;
 } */
 
+.btn-login {
+    width: 5%;
+    margin: 0 4% 0 0;
+}
+
 .h-login {
-    width: 55px;
-    height: 55px;
+    /* width: 55px; */
+    /* height: 55px; */
+    width: 70%;
     cursor: pointer;
 }
 
 .box-header {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
+    margin: 0 0 0 auto;
+    width: 80%;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
 }
 
 .search {
     height: 35px;
-    width: 60%;
-    display: flex;
+    /* width: 40%; */
+    /* display: flex; */
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
     background-color: white;
@@ -51,7 +58,13 @@ header {
     outline: 0;
 }
 
+.box-assinatura {
+    margin: 0 5% 0 0;
+    /* width: 25%; */
+}
+
 .btn-assinatura {
+    margin: 0 auto;
     color: black;
     text-decoration: none;
 }
@@ -62,7 +75,7 @@ header {
 }
 
 .btn-assinatura h2 {
-    margin: 0;
+    /* margin: 0; */
 }
 
 h3 {
