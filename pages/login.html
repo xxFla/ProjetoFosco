@@ -1,4 +1,5 @@
 <body>
+    <!-- login esta puxando css em principal do login cadastro -->
     <link rel="stylesheet" href="../css/login.css">
     <h3 class="exit-login position-fixed "><strong>X</strong></h3>
     <!-- <div class="login-box d-flex justify-content-center">
@@ -25,16 +26,16 @@
     <div class="content d-flex justify-content-center">
         <div id="login">
             <h1>Login</h1>
-            <form method="post" action="">
+            <form onsubmit="return false;">
         
         
-                <label for="email_login">Seu e-mail</label>
-                <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@htmlecsspro.com" />
+                <label for="email_login">User</label>
+                <input id="username" name="user" required="required" type="text" placeholder="contato@htmlecsspro.com" />
         
         
         
                 <label for="senha_login">Sua senha</label>
-                <input id="senha_login" name="senha_login" required="required" type="password" placeholder="1234" />
+                <input id="password" name="pass" required="required" type="password" placeholder="1234" />
         
         
         
@@ -43,7 +44,7 @@
         
         
         
-                <input type="submit" value="Logar" />
+                <input id="getLogin" type="submit" value="Logar" />
         
         
         
@@ -53,7 +54,7 @@
 
         <div id="cadastro">
             <h1>Cadastro</h1>
-            <form method="post" action="">
+            <form onsubmit="return false;">
             
             
                 <label for="nome_cad">Seu nome</label>
