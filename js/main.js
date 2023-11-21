@@ -1,44 +1,53 @@
-// $(document).ready(() => {
-//     $('main').append('<div class="container d-flex flex-wrap align-items-center justify-content-around"></div>');
-// });
-
-// $('.container').ready(() => {
-//     for (var i = 0; i < 33; i++) {
-//         $('.container').append(`
-//             <div class="box-main">
-//                 <figure>
-//                     <img src="/imgs/ex-img.png" alt="img">
-//                     <figcaption>Descrição</figcaption>
-//                 </figure>
-//                 <div class="box-price">
-//                     <p><strong>R$ 100,00</strong></p>
-//                     <button>COMPRAR</button>
-//                 </div>
-//             </div>
-//         `);
-//     }
-// });
-
-$('.container').ready(async () => {
-    var lista = new Array;
-    lista.push(await fetch("./lista/main.json").then(res => {
-        return res.text();
-    }).then(res => {
-        return JSON.parse(res);
-    }));
-    lista[0].forEach(element => {
-        // console.log(element)
-        $('.container').append(`
-            <div class="box-main d-flex flex-column align-items-center justify-content-around">
-                <figure class="text-center m-0">
-                    <img src="${element.dir}" alt="imgproduct">
-                    <figcaption class="fs-5">${element.name}</figcaption>
-                </figure>
-                <div class="box-price d-flex align-items-center justify-content-around">
-                    <p class="m-0"><strong>${element.value}</strong></p>
-                    <button class="border-0">COMPRAR</button>
+$('.container').ready(() => {
+    axios.get("http://192.168.100.21:5501/data/mainbase64.json").then((result) => {
+        // console.log(localStorage.getItem("flores"));
+        if (localStorage.getItem("flores") == null) {
+            localStorage.setItem("flores", JSON.stringify(result.data));
+        } else {
+            new Promise(() => {
+                localStorage.removeItem("flores");
+                new Promise(() => {
+                    localStorage.setItem("flores", JSON.stringify(result.data));
+                });
+            });
+        }
+        result.data.forEach(element => {
+            $('.container').append(`
+                <div class="box-main d-flex flex-column align-items-center justify-content-around">
+                    <figure class="text-center m-0">
+                        <img src="${element.src}" alt="imgproduct">
+                        <figcaption class="fs-5">${element.name}</figcaption>
+                    </figure>
+                    <div class="box-price d-flex align-items-center justify-content-around">
+                        <p class="m-0"><strong>R$ ${element.value}</strong></p>
+                        <button id="${element.id}" class="border-0">COMPRAR</button>
+                    </div>
                 </div>
-            </div>
-        `);
+            `);
+        });
+        for (var i = 0; i < 5; i++) {
+            if (i == 0) {
+                $('.carousel-indicators').append(`
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" class="active" aria-current="true" aria-label="Slide ${i + 1}"></button>
+                `);
+                $('.carousel-inner').append(`
+                    <div class="carousel-item active">
+                        <img src="${result.data[Math.floor(Math.random() * result.data.length)].src}" class="w-100 object-fit-scale" alt="img">
+                    </div>
+                `);
+            } else {
+                $('.carousel-indicators').append(`
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" aria-label="Slide ${i + 1}"></button>
+                `);
+                $('.carousel-inner').append(`
+                    <div class="carousel-item">
+                        <img src="${result.data[Math.floor(Math.random() * result.data.length)].src}" class="w-100 object-fit-scale" alt="img">
+                    </div>
+                `);
+            }
+        }
     });
+    // axios.get("http://192.168.100.21:5501/lista/img-main").then((result) => {
+    //     console.log(result);
+    // });
 });
