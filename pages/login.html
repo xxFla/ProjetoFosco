@@ -1,11 +1,11 @@
 <body>
     <link rel="stylesheet" href="../css/login.css">
     <h3 class="exit-login position-fixed "><strong>X</strong></h3>
-    <div class="login-box d-flex justify-content-center">
+    <!-- <div class="login-box d-flex justify-content-center">
         <div class="login-container">
             <h1>Login</h1>
             <hr>
-            <!-- <form action="https://residencia.free.mockoapp.net/userlogin" method="get"> -->
+            <form action="https://residencia.free.mockoapp.net/userlogin" method="get">
             <form onsubmit="return false;">
                 <div class="input-container">
                     <label for="username">Usuário:</label>
@@ -17,6 +17,70 @@
                 </div>
                 <button>Entrar</button>
             </form>
+        </div>
+    </div> -->
+    <link rel="stylesheet" href="../css/loginCadastro.css">
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+    <div class="content d-flex justify-content-center">
+        <div id="login">
+            <h1>Login</h1>
+            <form method="post" action="">
+        
+        
+                <label for="email_login">Seu e-mail</label>
+                <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@htmlecsspro.com" />
+        
+        
+        
+                <label for="senha_login">Sua senha</label>
+                <input id="senha_login" name="senha_login" required="required" type="password" placeholder="1234" />
+        
+        
+        
+                <!-- <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
+                <label for="manterlogado">Manter-me logado</label> -->
+        
+        
+        
+                <input type="submit" value="Logar" />
+        
+        
+        
+            </form>
+            <p class="link">Ainda não tem conta?<a href="#paracadastro">Cadastre-se</a></p>
+        </div>
+
+        <div id="cadastro">
+            <h1>Cadastro</h1>
+            <form method="post" action="">
+            
+            
+                <label for="nome_cad">Seu nome</label>
+                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Luiz Augusto" />
+            
+            
+                <label for="email_cad">Seu e-mail</label>
+                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com" />
+            
+            
+            
+                <label for="senha_cad">Sua senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="1234" />
+            
+            
+            
+                <label for="senha_cad">Confirme sua senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="1234" />
+            
+            
+            
+                <input type="submit" value="Cadastrar" />
+            
+            
+            
+            </form>
+            <p class="link">Já tem conta?<a href="#paralogin"> Ir para Login </a></p>
         </div>
     </div>
     <script src="../js/login.js"></script>
