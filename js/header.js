@@ -1,22 +1,14 @@
-// $('header').load("../pages/header.html");
+$('main').css("margin-top", $('header').height());
+$('.box-searchcat').css("height", $('header').height());
 
-window.onload = () => {
-    $('main').css("margin-top", $('header').height());
-    $('.box-searchcat').css("height", $('header').height());
-
-    // console.log(sessionStorage.getItem("logedUser"));
-    if (sessionStorage.getItem("logedUser") != null) {
-        $('.btn-login').remove();
-        $('header').append(`
-            <div class="area-user">
-                <h3>${sessionStorage.getItem("logedUser")}</h3>
-            </div>
-        `);
-    }
+if (sessionStorage.getItem("logedUser") != null) {
+    $('.btn-login').remove();
+    $('header').append(`
+        <div class="area-user">
+            <h3>${sessionStorage.getItem("logedUser")}</h3>
+        </div>
+    `);
 }
-
-// console.log($('.dropdown-menu'))
-// while ($('ul .show').ready())
 
 $('.h-login, .logo').ready(function () {
     $(".logo").click(() => {
@@ -25,7 +17,6 @@ $('.h-login, .logo').ready(function () {
 
     $('.h-login').click(function (e) {
         $('.login-area').removeClass('d-none').addClass('d-flex');
-        // $('body').css("overflow", "hidden");
         $('.login-area').load("../pages/login.html");
     });
 });

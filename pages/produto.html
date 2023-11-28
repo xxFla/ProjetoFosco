@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <link rel="shortcut icon" href="../imgs/icons/OIG-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/produto.css">
+</head>
+<body class="w-100 d-flex align-items-center flex-column m-0">
+    <header class="z-1 position-fixed d-flex flex-row align-items-center justify-content-around">
+      <!-- <script src="js/header.js"></script> -->
+      <script>
+        $('header').load("../pages/header.html");
+      </script>
+    </header>
+    <main>
+      <div class="container">
+        <div class="produto d-flex justify-content-between">
+          <div class="imgPro">
+          </div>
+          <div class="NomeProduto">
+            <h1 class="nome"><!--Nome do Produto--></h1>
+            <h1 class="preço"><!--R$10,00--></h1>
+            <a class="pagamento" href="assinatura.html">Formas de Pagamento</a>
+            <h1 class="frete">Frete Grátis</h1>
+            <a class="prazo_entrega" href="assinatura.html">Calcular Prazo de Enrega</a>
+            <!-- <h1 class="frete">Quantidade:</h1> -->
+            <button class="comprar "onclick="window.location.href='assinatura.html'">Comprar</button>
+            <button class="adc_car "onclick="window.location.href='assinatura.html'">Adicionar no Carrinho</button>
+          </div>
+        </div>
+        <div>
+          <h1>Descrição</h1>
+          <p>Lorem ipsum dolor sit amet. Sed officia mollitia qui ipsam incidunt sed animi asperiores ut iure maxime ex culpa nostrum aut cumque provident aut perferendis omnis. Eos dignissimos rerum qui aspernatur eius sit dolor earum et facere quisquam. At labore ullam vel nihil inventore et praesentium aspernatur quo praesentium earum sed ipsum voluptatem sit facere libero? Cum quidem animi eum perspiciatis Quis et consequatur voluptatibus.</p>
+          <h1>Cuidados</h1>
+          <p1>Lorem ipsum dolor sit amet. Sed officia mollitia qui ipsam incidunt sed animi asperiores ut iure maxime ex culpa nostrum aut cumque provident aut perferendis omnis. Eos dignissimos rerum qui aspernatur eius sit dolor earum et facere quisquam. At labore ullam vel nihil inventore et praesentium aspernatur quo praesentium earum sed ipsum voluptatem sit facere libero? Cum quidem animi eum perspiciatis Quis et consequatur voluptatibus.</p1>
+        </div>
+      </div>
+    </main>
+    <!-- <footer></footer> -->
+    <!-- <script src="/js/index.js"></script> -->
+    <script src="../js/produto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <div class="dados_compra">
+
+    </div>  -->
+ </body>
+</html>

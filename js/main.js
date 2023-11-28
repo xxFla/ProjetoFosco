@@ -1,6 +1,8 @@
 $('.container').ready(() => {
+    // 34.125.79.18
     axios.get("http://192.168.100.21:5501/data/mainbase64.json").then((result) => {
         // console.log(localStorage.getItem("flores"));
+        // console.log(result);
         if (localStorage.getItem("flores") == null) {
             localStorage.setItem("flores", JSON.stringify(result.data));
         } else {
@@ -11,6 +13,7 @@ $('.container').ready(() => {
                 });
             });
         }
+        var count = 1;
         result.data.forEach(element => {
             $('.container').append(`
                 <div class="box-main d-flex flex-column align-items-center justify-content-around">
@@ -24,6 +27,15 @@ $('.container').ready(() => {
                     </div>
                 </div>
             `);
+            if (count == result.data.length) {
+                $('.box-price button').click(function(e){
+                    // console.log(e.target.id);
+                    // console.log(JSON.parse(localStorage.getItem("flores"))[e.target.id]);
+                    localStorage.setItem("produtoSele", JSON.stringify(JSON.parse(localStorage.getItem("flores"))[e.target.id]));
+                    window.location.href = '/pages/produto.html';
+                });
+            }
+            count++;
         });
         for (var i = 0; i < 5; i++) {
             if (i == 0) {
@@ -47,7 +59,4 @@ $('.container').ready(() => {
             }
         }
     });
-    // axios.get("http://192.168.100.21:5501/lista/img-main").then((result) => {
-    //     console.log(result);
-    // });
 });
